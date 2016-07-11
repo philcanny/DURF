@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Result Page";
+}
+
+
+    <div class="container">
+
+        <div class="jumbotron">
+            <h1>Design your dream Bike</h1>
+            <p>Resize this responsive page to see the effect!</p>
+        </div>
+
+        <div class="row">
+            
+            <script>
+            function myFunction() {
+                var fname = localStorage.getItem("frame")
+                    document.getElementById("greyBike").src = fname;
+                var sname = localStorage.getItem("saddle")
+                    document.getElementById("SaddleImage").src = sname;
+            }
+            </script>
+
+            <div class="col-sm-8">
+                <div id="GreyBike">
+                    <!-- Make sure the id is the image not the div -->
+                    <img id="greyBike" src="/Content/Images/BlackFrame.png">
+                </div>
+                <div>
+                    <div>
+                        <img id="SaddleImage" src="/Content/Images/RedSaddle.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
