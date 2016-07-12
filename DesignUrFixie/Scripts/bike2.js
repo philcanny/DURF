@@ -21,11 +21,15 @@ var greenSaddle = false;*/
         {var greenFrame = false;}
 }*/
 
+var xyz = "good";
+
 function setBlackFrame(x) {
     localStorage.setItem("frame", "/Content/Images/BlackFrame.png"); 
     var frame = document.getElementById("FrameImage");
     var framecolour = frame.innerHTML;
     frame.innerHTML = '<img src="/Content/Images/BlackFrame.png">';
+    var mike = xyz;
+
     }
 
 function setRedFrame(x) {

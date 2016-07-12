@@ -1,3 +1,8 @@
+/*var gframe = "";
+var gsaddle = "";
+var ghandlebar = "";
+var gwheels = "";*/
+
 
 
 function setFrame(framechoice) {
@@ -14,7 +19,7 @@ function setFrame(framechoice) {
     };
 
     frame.innerHTML = framecolor;
-
+    gframe = framechoice;
 }
 
 function setSaddle(saddlechoice) {
@@ -31,7 +36,7 @@ function setSaddle(saddlechoice) {
     };
 
     saddle.innerHTML = saddlecolor;
-
+    gsaddle = saddlechoice;
 }
 
 
@@ -49,7 +54,7 @@ function setHandlebar(handlebarchoice) {
     };
 
     handlebar.innerHTML = handlebarcolor;
-   
+    ghandlebar = handlebarchoice;
 }
 
 function setWheels(wheelschoice) {
@@ -66,8 +71,49 @@ function setWheels(wheelschoice) {
     };
 
     wheels.innerHTML = wheelscolor;
-  
+    gwheels = wheelschoice;
+    
 }
+
+/* submit button validates that 
+
+a) you are logged in        
+        is user logged in? if yes proceed if not redirect to login screen....
+b) you have pick one of each option         
+        if item is not selected generate a message asking to select an option for that item
+
+on reload of page previous choices are to be erased?
+
+if logged in and choices are made it will
+1) calls the getchoices function and 
+2) Generates bike instance 
+3) sets values to bike instance.
+(validation may have to be in the getchoices function TBC)
+
+generate order_id
+get login_id from session and pass it to customer_id 
+(or set login_id equal customer_id somehow....from login data
+
+*/
+
+function getchoices() {
+    alert("Your Bike selections are as Follows\n" + "Frame: " + gframe + "\n" + "Saddle: " + gsaddle + "\n" + "Handbars: " + ghandlebar + "\n" + "Wheels: " + gwheels);
+}
+
+/*  possible code to write to the db based on the choices.... 
+if (gframe === 'Black') {
+         write to instance of a bike frame_Id = 1;
+    }
+    else if (gframe === 'Red') {
+        /* write to instance of a bike frame_Id = 2;
+    }
+    else if (gframe === 'Green') {
+       /* write to instance of a bike frame_Id = 3;
+    }; 
+    repeat each option for each part....when I have it figured out.
+    
+    */
+
 
 
 
