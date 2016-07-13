@@ -1,0 +1,99 @@
+﻿@{
+    ViewBag.Title = "Gallery Page";
+}
+
+<style>
+    #slider { 
+    margin: 0px auto; 
+    position: relative; 
+    width: 680px; 
+    //box-shadow:0 0 0 20px rgba(0,0,0,0.4);
+}
+
+img {
+    height: auto;
+    max-width: 100%!important;
+}
+
+#slider > div { 
+    position: absolute;   
+}
+</style>
+<div>
+    <h2>Previously Designed Bikes</h2>
+</div>
+
+<div id="slider" class="img-responsive">
+    <div>
+        <img src="~/Content/Gallery/RfBsGwGh.png" />
+    </div>
+    <div>
+        <img src="~/Content/Gallery/GfGsGwGh.png" />
+    </div>
+    <div>
+        <img src="~/Content/Gallery/RfRsRwRh.png" />
+    </div>
+    <div>
+        <img src="~/Content/Gallery/BfBsBwBh.png" />
+    </div>
+    <div>
+        <img src="~/Content/Gallery/GfBsGwBh.png" />
+    </div>
+    <div>
+        <img src="~/Content/Gallery/BfBsRwBh.png" />
+    </div>
+    <div>
+        <img src="~/Content/Gallery/RfBsGwGh.png" />
+    </div>
+    <div>
+        <img src="~/Content/Gallery/BfGsBwBh.png" />
+    </div>
+    <div>
+        <img src="~/Content/Gallery/BfBsRwBh.png" />
+    </div>
+    <div>
+        <img src="~/Content/Gallery/RfBsRwBh.png" />
+    </div>
+    <div>
+        <img src="~/Content/Gallery/RfRsGwGh.png" />
+    </div>
+    <div>
+        <img src="~/Content/Gallery/RfBsBwRh.png" />
+    </div>
+    <div>
+        <img src="~/Content/Gallery/GfBsGwRh.png" />
+    </div>
+    <div>
+        <img src="~/Content/Gallery/BfBsGwBh.png" />
+    </div>
+    <div>
+        <img src="~/Content/Gallery/BfBsBwRh.png" />
+    </div>
+    <div>
+        <img src="~/Content/Gallery/GfBsGwBh.png" />
+    </div>
+    <div>
+        <img src="~/Content/Gallery/GfRsRwRh.png" />
+    </div>
+    <div>
+        <img src="~/Content/Gallery/BfBsBwGh.png" />
+    </div>
+    <div>
+        <img src="~/Content/Gallery/GfBsBwRh.png" />
+    </div>
+</div>
+
+@section scripts{
+    <script>
+    $("#slider > div:gt(0)").hide();
+    $("#slider").height($("#slider > div > img").height());
+    setInterval(function () {
+        $('#slider > div:first')
+          .fadeOut(750)
+          .next()
+          .fadeIn(750)
+          .end()
+          .appendTo('#slider');
+    }, 3000);
+    </script>
+}

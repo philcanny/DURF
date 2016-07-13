@@ -283,6 +283,8 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="Properties\PublishProfiles\Durf %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\Durf.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bike3.js" />
     <Content Include="Scripts\bike2.js" />

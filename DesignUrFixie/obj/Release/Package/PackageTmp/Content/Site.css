@@ -1,0 +1,121 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+        .col-sm-3, .col-md-3, col-lg-3 {
+            margin-top: 10px;
+        }
+
+        .button {
+            cursor: pointer;
+            border: none;
+            color: white;   /* text colour */
+            padding: 5px 10px;
+            display: inline-block;
+            margin: 4px 4px;
+            /*    text-decoration: none; */
+        }
+        .button:hover {
+            color: black;   /* text colour */
+            /*background-color: darkgrey;*/
+            box-shadow: 0 12px 12px 0 rgba(0,0,0,0.25);
+        }
+        
+        .BF {
+            background-color: black;
+            width: 40px;
+            }
+        .RF {
+            background-color: red;
+            width: 40px;
+        }
+        .GF {
+            background-color: greenyellow;
+            color: black;   /* text colour */
+            width: 40px;
+        }
+        .Sub {
+            width: 100px;
+            height: 30px;
+            background-color: greenyellow;
+            float: right;
+        }
+                
+        #GreyBike
+        {
+            position:absolute;
+            top: 0;
+            left: 0;
+           
+        }
+        
+        #FrameImage, #SaddleImage, #HandlebarImage, #WheelsImage
+        {
+            position:absolute;
+            top: 0;
+            left: 0;
+        } 
+
+        .Create
+        {
+         display: block; 
+         
+        }
+        footer {
+        display: block;
+        }
+
+.jumbotron {
+    background-image: url('Images/bicycle.png');
+    background-size: cover;
+}
+a.navbar-brand  {     
+ background: url(/Content/Images/DURFLogo3.png) no-repeat top left;
+ display: block;     
+ width: 140px;       
+ height: 55px;       
+ text-indent: -9999px;  /*hides the link text*/ 
+  } 
+a.navbar-brand:hover {
+            background: url(/Content/Images/DURFLogo4.png) no-repeat top left;
+        }
+
+@media (max-width: 768px) {
+    .col-sm-12 {
+        min-height: 440px;  /* block containing bike image minimum height so the footer does not disappear behide bike*/
+    }
+    .col-sm-3
+    {
+        float: left;
+    }
+}
+@media (max-width: 500px) {
+    .col-sm-12 {
+        min-height: 290px;
+    }
+}
+@media (max-width: 350px) {
+    .col-sm-12 {
+        min-height: 200px;
+    }
+}

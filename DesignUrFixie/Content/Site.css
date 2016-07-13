@@ -89,6 +89,12 @@ textarea {
     background-image: url('Images/bicycle.png');
     background-size: cover;
 }
+.jumbotron h1,
+.jumbotron .h1 {
+  color: white;
+  border: 1px;
+  background-color: rgba(0,0,0,0.4);
+}
 a.navbar-brand  {     
  background: url(/Content/Images/DURFLogo3.png) no-repeat top left;
  display: block;     

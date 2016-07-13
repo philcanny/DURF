@@ -1,0 +1,76 @@
+﻿@{
+    ViewBag.Title = "Gallery";
+}
+
+<style>
+    #gallery {
+        height: 440px;
+        width: 680px;
+        margin: 20px auto;
+        position: relative;
+    }
+
+    #bike {
+        height: 440px;
+        width: 680px;
+        position: absolute;
+    }
+
+    #arrowleft {
+        height: 440px;
+        width: 680px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+
+    #arrowright {
+        height: 440px;
+        width: 680px;
+        position: absolute; /* button holders*/
+        right: 0px;
+        top: 0px;
+    }
+
+    .left {
+        height: 45px;
+        width: 45px;
+        position: absolute;
+        left: 5px;
+        top: 15%;
+    }
+
+    .right {
+        height: 45px;
+        width: 45px;
+        position: absolute;
+        right: 5px;
+        top: 15%;
+    }
+
+</style>
+
+
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Previously Designed Bikes</h1>
+        </div>
+    </div>
+
+    <div id="gallery">
+        <img src="~/Content/TestImages/img3.png" id="bike" class="img-responsive" />
+
+            <div id="arrowleft">
+                <img src="~/Content/TestImages/arrowleft.png" class="left" onClick="slide(-1)"  />
+            </div>
+            <div id="arrowright">
+                <img src="~/Content/TestImages/arrowright.png" class="right" onClick="slide(1)" />
+            </div>
+     
+    </div>
+
+ 
+
+ 
+
