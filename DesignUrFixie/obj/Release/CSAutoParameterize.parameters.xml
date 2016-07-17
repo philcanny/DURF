@@ -6,4 +6,7 @@
   <parameter name="DURF-Web.config Connection String" description="DURF Connection String used in web.config by the application to access the database." defaultValue="data source=(LocalDB)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\DURF.mdf;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" tags="SqlConnectionString">
     <parameterEntry kind="XmlFile" scope="C:\\Users\\philc\\Source\\Repos\\DURF\\DesignUrFixie\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DURF']/@connectionString" />
   </parameter>
+  <parameter name="MyDbContext-Web.config Connection String" description="MyDbContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=(localdb)\MSSQLLocalDB; Initial Catalog=MyDbContext-20160716191904; Integrated Security=True; MultipleActiveResultSets=True; AttachDbFilename=|DataDirectory|MyDbContext-20160716191904.mdf" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\philc\\Source\\Repos\\DURF\\DesignUrFixie\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='MyDbContext']/@connectionString" />
+  </parameter>
 </parameters>

@@ -7,6 +7,7 @@ var gwheels = "";*/
 
 function setFrame(framechoice) {
     var frame = document.getElementById("FrameImage");
+    var frameC = document.getElementById("FrameColour").value=framechoice;
 
     if (framechoice === 'Black') {
         framecolor = '<img src="/Content/Images/BlackFrame.png" class="img-responsive">'
@@ -19,11 +20,13 @@ function setFrame(framechoice) {
     };
 
     frame.innerHTML = framecolor;
+    frameC.innerHTML = framechoice;
     gframe = framechoice;
 }
 
 function setSaddle(saddlechoice) {
     var saddle = document.getElementById("SaddleImage");
+    var frameC = document.getElementById("SaddleColour").value = saddlechoice;
 
     if (saddlechoice === 'Black') {
         saddlecolor = '<img src="/Content/Images/BlackSaddle.png" class="img-responsive">'
@@ -36,12 +39,14 @@ function setSaddle(saddlechoice) {
     };
 
     saddle.innerHTML = saddlecolor;
+    saddleC.innerHTML = saddlechoice;
     gsaddle = saddlechoice;
 }
 
 
 function setHandlebar(handlebarchoice) {
     var handlebar = document.getElementById("HandlebarImage");
+    var frameC = document.getElementById("HandlebarColour").value = handlebarchoice;
 
     if (handlebarchoice === 'Black') {
         handlebarcolor = '<img src="/Content/Images/BlackHandlebar.png" class="img-responsive">'
@@ -54,11 +59,13 @@ function setHandlebar(handlebarchoice) {
     };
 
     handlebar.innerHTML = handlebarcolor;
+    handlebarC.innerHTML = handlebarchoice;
     ghandlebar = handlebarchoice;
 }
 
 function setWheels(wheelschoice) {
     var wheels = document.getElementById("WheelsImage");
+    var frameC = document.getElementById("WheelColour").value = wheelschoice;
 
     if (wheelschoice === 'Black') {
         wheelscolor = '<img src="/Content/Images/BlackWheels.png" class="img-responsive">'
@@ -71,6 +78,7 @@ function setWheels(wheelschoice) {
     };
 
     wheels.innerHTML = wheelscolor;
+    wheelC.innerHTML = wheelschoice;
     gwheels = wheelschoice;
     
 }

@@ -1,0 +1,57 @@
+﻿@model IEnumerable<DesignUrFixie.Models.Bike>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BikeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FrameColour)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SaddleColour)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HandlebarColour)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WheelColour)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BikeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FrameColour)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SaddleColour)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HandlebarColour)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WheelColour)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.BikeId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.BikeId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.BikeId })
+        </td>
+    </tr>
+}
+
+</table>

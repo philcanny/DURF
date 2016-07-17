@@ -190,3 +190,6 @@ C:\Users\philc\Source\Repos\DURF\DesignUrFixie\bin\Microsoft.Owin.Security.Micro
 C:\Users\philc\Source\Repos\DURF\DesignUrFixie\obj\Release\DesignUrFixie.csprojResolveAssemblyReference.cache
 C:\Users\philc\Source\Repos\DURF\DesignUrFixie\obj\Release\DesignUrFixie.dll
 C:\Users\philc\Source\Repos\DURF\DesignUrFixie\obj\Release\DesignUrFixie.pdb
+C:\Users\philc\Source\Repos\DURF\DesignUrFixie\obj\Release\DesignUrFixie.Migrations.InitialCreate.resources
+C:\Users\philc\Source\Repos\DURF\DesignUrFixie\obj\Release\DesignUrFixie.csproj.GenerateResource.Cache
+C:\Users\philc\Source\Repos\DURF\DesignUrFixie\obj\Release\DesignUrFixie.Migrations.BikeNameFieldAdded.resources

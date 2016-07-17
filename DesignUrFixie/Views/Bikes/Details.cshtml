@@ -1,0 +1,58 @@
+﻿@model DesignUrFixie.Models.Bike
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Bike</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BikeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BikeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FrameColour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FrameColour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SaddleColour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaddleColour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HandlebarColour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HandlebarColour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WheelColour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WheelColour)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BikeId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

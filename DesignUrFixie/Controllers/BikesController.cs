@@ -46,7 +46,7 @@ namespace DesignUrFixie.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "BikeId,FrameColour,SaddleColour,HandlebarColour,WheelColour")] Bike bike)
+        public ActionResult Create([Bind(Include = "BikeId,BikeName,FrameColour,SaddleColour,HandlebarColour,WheelColour")] Bike bike)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace DesignUrFixie.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "BikeId,FrameColour,SaddleColour,HandlebarColour,WheelColour")] Bike bike)
+        public ActionResult Edit([Bind(Include = "BikeId,BikeName,FrameColour,SaddleColour,HandlebarColour,WheelColour")] Bike bike)
         {
             if (ModelState.IsValid)
             {
