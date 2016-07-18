@@ -65,7 +65,8 @@ textarea {
         {
             position:absolute;
             top: 0;
-            left: 0;
+            left: 20%;
+            right: 20%;           
            
         }
         
@@ -73,8 +74,16 @@ textarea {
         {
             position:absolute;
             top: 0;
-            left: 0;
+            left: 20%;
+            right: 20%;
         } 
+
+        #FormButton
+        {
+            position:absolute;
+            top:440px;
+            left:auto;    
+        }
 
         .Create
         {
@@ -105,22 +114,50 @@ a.navbar-brand  {
 a.navbar-brand:hover {
             background: url(/Content/Images/DURFLogo4.png) no-repeat top left;
         }
+@media (max-width: 991px) {
+      
+        #GreyBike, #FrameImage, #SaddleImage, #HandlebarImage, #WheelsImage
+        {
+            left: 10%;
+            right: 10%;
+        } 
+}
 
 @media (max-width: 768px) {
+    #GreyBike, #FrameImage, #SaddleImage, #HandlebarImage, #WheelsImage
+        {
+            left: 0%;
+            right: 0%;
+        } 
     .col-sm-12 {
         min-height: 440px;  /* block containing bike image minimum height so the footer does not disappear behide bike*/
     }
-    .col-sm-3
+   .col-sm-4
     {
         float: left;
     }
 }
+@media (max-width: 600px) {
+    #FormButton {
+        top: 370px;
+    }
+}
 @media (max-width: 500px) {
+    #FormButton{
+        top: 350px;
+    }
     .col-sm-12 {
         min-height: 290px;
     }
 }
+@media (max-width: 450px) {
+    #FormButton{
+        top: 270px;
+    }
 @media (max-width: 350px) {
+    #FormButton{
+        top: 220px;
+    }
     .col-sm-12 {
         min-height: 200px;
     }
