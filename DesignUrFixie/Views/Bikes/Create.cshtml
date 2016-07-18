@@ -51,23 +51,24 @@
 
 </div>
 
-<div class="col-sm-8">
-    <div id="GreyBike">
-        <img src="~/Content/Images/GreyBike.png" class="img-responsive">
-    </div>
-    <div>
-        <div id="FrameImage">
+<div class="row">
+    <div class="col-sm-8">
+        <div id="GreyBike">
+            <img src="~/Content/Images/GreyBike.png" class="img-responsive">
         </div>
-        <div id="SaddleImage">
+        <div>
+            <div id="FrameImage">
+            </div>
+            <div id="SaddleImage">
+            </div>
+            <div id="HandlebarImage">
+            </div>
+            <div id="WheelsImage">
+            </div>
         </div>
-        <div id="HandlebarImage">
-        </div>
-        <div id="WheelsImage">
-        </div>
-    </div>
 
-</div>
-<div class="col-sm-4">
+    </div>
+    <div class="col-sm-4">
         @using (Html.BeginForm())
         {
             @Html.AntiForgeryToken()
@@ -136,3 +137,4 @@
 
 
     </div>
+</div>
