@@ -12,7 +12,7 @@ namespace DesignUrFixie.Models
         public string FrameColour { get; set; }
         public string SaddleColour { get; set; }
         public string HandlebarColour { get; set; }
-        public string WheelColour { get; set; }
+        public string WheelsColour { get; set; }
 
         internal static void SaveChanges()
         {

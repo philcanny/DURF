@@ -10,6 +10,7 @@ using DesignUrFixie.Models;
 
 namespace DesignUrFixie.Controllers
 {
+    [Authorize]
     public class BikesController : Controller
     {
         private MyDbContext db = new MyDbContext();   //create an instance of the DataContext class in our DB
@@ -36,6 +37,7 @@ namespace DesignUrFixie.Controllers
         }
 
         // GET: Bikes/Create
+        [AllowAnonymous]
         public ActionResult Create()
         {
             return View();
@@ -46,7 +48,7 @@ namespace DesignUrFixie.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "BikeId,BikeName,FrameColour,SaddleColour,HandlebarColour,WheelColour")] Bike bike)
+        public ActionResult Create([Bind(Include = "BikeId,BikeName,FrameColour,SaddleColour,HandlebarColour,WheelsColour")] Bike bike)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +80,7 @@ namespace DesignUrFixie.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "BikeId,BikeName,FrameColour,SaddleColour,HandlebarColour,WheelColour")] Bike bike)
+        public ActionResult Edit([Bind(Include = "BikeId,BikeName,FrameColour,SaddleColour,HandlebarColour,WheelsColour")] Bike bike)
         {
             if (ModelState.IsValid)
             {

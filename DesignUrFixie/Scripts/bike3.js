@@ -20,7 +20,7 @@ function setFrame(framechoice) {
     };
 
     frame.innerHTML = framecolor;
-    frameC.innerHTML = framechoice;
+    //frameC.innerHTML = framechoice;
     gframe = framechoice;
 }
 
@@ -39,7 +39,7 @@ function setSaddle(saddlechoice) {
     };
 
     saddle.innerHTML = saddlecolor;
-    saddleC.innerHTML = saddlechoice;
+    //saddleC.innerHTML = saddlechoice;
     gsaddle = saddlechoice;
 }
 
@@ -59,13 +59,14 @@ function setHandlebar(handlebarchoice) {
     };
 
     handlebar.innerHTML = handlebarcolor;
-    handlebarC.innerHTML = handlebarchoice;
+    //handlebarC.innerHTML = handlebarchoice;
     ghandlebar = handlebarchoice;
 }
 
 function setWheels(wheelschoice) {
     var wheels = document.getElementById("WheelsImage");
-    var frameC = document.getElementById("WheelColour").value = wheelschoice;
+    var wheelC = document.getElementById("WheelsColour").value = wheelschoice;
+    
 
     if (wheelschoice === 'Black') {
         wheelscolor = '<img src="/Content/Images/BlackWheels.png" class="img-responsive">'
@@ -78,7 +79,7 @@ function setWheels(wheelschoice) {
     };
 
     wheels.innerHTML = wheelscolor;
-    wheelC.innerHTML = wheelschoice;
+    //wheelC.innerHTML = wheelschoice;
     gwheels = wheelschoice;
     
 }

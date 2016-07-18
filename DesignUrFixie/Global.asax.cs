@@ -16,6 +16,7 @@ namespace DesignUrFixie
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            System.Data.Entity.Database.SetInitializer<Models.MyDbContext>(null); //added to fix db mismatch issue after I changed db.
         }
     }
 }
