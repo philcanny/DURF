@@ -10,11 +10,13 @@ using DesignUrFixie.Models;
 
 namespace DesignUrFixie.Controllers
 {
+    [Authorize]
     public class BikesController : Controller
     {
         private MyDbContext db = new MyDbContext();   //create an instance of the DataContext class in our DB
 
         // GET: Bikes
+        [AllowAnonymous]
         public ActionResult Index()
         {
             return View(db.Bikes.ToList());
