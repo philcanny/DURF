@@ -14,6 +14,11 @@ namespace DesignUrFixie.Controllers
             // GET /home/index
             return View();
         }
+        public ActionResult IndexGallery()
+        {
+            // GET /home/indexGallery
+            return View();
+        }
 
         public ActionResult Gallery()
         {

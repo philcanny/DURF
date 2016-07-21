@@ -25,54 +25,6 @@
 
     <!--  THE FORM   -->
 <div class="container" id="FormButton">
-    <!--  THE BUTTONS   -->
-
-    <div class="row">
-        <h3>  Click on Ur colours</h3>
-        <div class="col-sm-3">
-            <div id="FrameColor">
-                <p><b>FRAME</b> Colour</p>
-                <p>
-                    <input type='button' class="button BF" onclick="setFrame('Black')">
-                    <input type='button' class="button RF" onclick="setFrame('Red')">
-                    <input type='button' class="button GF" onclick="setFrame('Green')">
-                </p>
-            </div>
-        </div>
-
-        <div class="col-sm-3">
-            <div id="SaddleColor">
-                <p><b>SADDLE</b> Colour</p>
-                <p>
-                    <input type='button' class="button BF" onclick="setSaddle('Black')">
-                    <input type='button' class="button RF" onclick="setSaddle('Red')">
-                    <input type='button' class="button GF" onclick="setSaddle('Green')">
-                </p>
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div id="HandlebarColor">
-                <p><b>HANDLEBAR</b> Colour</p>
-                <p>
-                    <input type='button' class="button BF" onclick="setHandlebar('Black')">
-                    <input type='button' class="button RF" onclick="setHandlebar('Red')">
-                    <input type='button' class="button GF" onclick="setHandlebar('Green')">
-                </p>
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div id="WheelsColor">
-                <p><b>WHEELS</b> Colour</p>
-                <p>
-                    <input type='button' class="button BF" onclick="setWheels('Black')">
-                    <input type='button' class="button RF" onclick="setWheels('Red')">
-                    <input type='button' class="button GF" onclick="setWheels('Green')">
-                </p>
-            </div>
-        </div>
-
-    </div>
-
     <div class="col-sm-8" id="Bform">
         @using (Html.BeginForm())
             {
@@ -134,7 +86,53 @@
 
     </div>
 
+    <!--  THE BUTTONS   -->
 
+    <div class="row">
+        <h3>  Click on Ur colours</h3>
+        <div class="col-sm-4">
+            <div id="FrameColor">
+                <p><b>FRAME</b> Colour</p>
+                <p>
+                    <input type='button' class="button BF" onclick="setFrame('Black')">
+                    <input type='button' class="button RF" onclick="setFrame('Red')">
+                    <input type='button' class="button GF" onclick="setFrame('Green')">
+                </p>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div id="SaddleColor">
+                <p><b>SADDLE</b> Colour</p>
+                <p>
+                    <input type='button' class="button BF" onclick="setSaddle('Black')">
+                    <input type='button' class="button RF" onclick="setSaddle('Red')">
+                    <input type='button' class="button GF" onclick="setSaddle('Green')">
+                </p>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div id="HandlebarColor">
+                <p><b>HANDLEBAR</b> Colour</p>
+                <p>
+                    <input type='button' class="button BF" onclick="setHandlebar('Black')">
+                    <input type='button' class="button RF" onclick="setHandlebar('Red')">
+                    <input type='button' class="button GF" onclick="setHandlebar('Green')">
+                </p>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div id="WheelsColor">
+                <p><b>WHEELS</b> Colour</p>
+                <p>
+                    <input type='button' class="button BF" onclick="setWheels('Black')">
+                    <input type='button' class="button RF" onclick="setWheels('Red')">
+                    <input type='button' class="button GF" onclick="setWheels('Green')">
+                </p>
+            </div>
+        </div>
+        
+    </div>
     
 </div><!-- container div end -->
 

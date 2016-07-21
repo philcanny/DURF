@@ -1,4 +1,6 @@
-﻿body {
+﻿/*  768px */
+
+body {
     padding-top: 50px;
     padding-bottom: 20px;
 }
@@ -132,10 +134,8 @@ a.navbar-brand:hover {
     .col-sm-12 {
         min-height: 440px;  /* block containing bike image minimum height so the footer does not disappear behide bike*/
     }
-   .col-sm-4
-    {
-        float: left;
-    }
+
+
 }
 @media (max-width: 600px) {
     #FormButton {
@@ -151,9 +151,10 @@ a.navbar-brand:hover {
     }
 }
 @media (max-width: 450px) {
-    #FormButton{
+    #FormButton {
         top: 270px;
     }
+}
 @media (max-width: 350px) {
     #FormButton{
         top: 220px;
