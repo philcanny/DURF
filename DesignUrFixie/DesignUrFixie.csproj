@@ -213,6 +213,14 @@
     <Compile Include="Migrations\201607161856506_BikeNameFieldAdded.Designer.cs">
       <DependentUpon>201607161856506_BikeNameFieldAdded.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201607212014267_TakeTwo.cs" />
+    <Compile Include="Migrations\201607212014267_TakeTwo.Designer.cs">
+      <DependentUpon>201607212014267_TakeTwo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607212018005_TakeThree.cs" />
+    <Compile Include="Migrations\201607212018005_TakeThree.Designer.cs">
+      <DependentUpon>201607212018005_TakeThree.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Bike.cs" />
@@ -372,6 +380,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201607161856506_BikeNameFieldAdded.resx">
       <DependentUpon>201607161856506_BikeNameFieldAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607212014267_TakeTwo.resx">
+      <DependentUpon>201607212014267_TakeTwo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607212018005_TakeThree.resx">
+      <DependentUpon>201607212018005_TakeThree.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

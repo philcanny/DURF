@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-//using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 
 namespace DesignUrFixie.Models
 {
@@ -10,15 +10,15 @@ namespace DesignUrFixie.Models
     public class Bike
     {
         public int BikeId { get; set; }
-        //[Required]
+        [Required]
         public string BikeName { get; set; }
-        //[Required]
+        [Required]
         public string FrameColour { get; set; }
-        //[Required]
+        [Required]
         public string SaddleColour { get; set; }
-        //[Required]
+        [Required]
         public string HandlebarColour { get; set; }
-        //[Required]
+        [Required]
         public string WheelColour { get; set; }
 
         internal static void SaveChanges()
