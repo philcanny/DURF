@@ -330,7 +330,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Gallery1.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\IndexP.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
@@ -363,8 +363,11 @@
     <Content Include="Views\Bikes\Edit.cshtml" />
     <Content Include="Views\Bikes\Index.cshtml" />
     <Content Include="Views\Shared\_BikePartialView.cshtml" />
-    <Content Include="Views\Bikes\Create - Copy.cshtml" />
-    <Content Include="Views\Home\IndexGallery.cshtml" />
+    <Content Include="Views\Bikes\1 Create - Copy.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Index - Copy.cshtml" />
+    <Content Include="Views\Home\IndexGallery - Copy.cshtml" />
+    <Content Include="Views\Bikes\1 Edit - Copy.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

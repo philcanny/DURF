@@ -107,6 +107,9 @@ get login_id from session and pass it to customer_id
 function getchoices() {
     alert("Your Bike selections are as Follows\n" + "Frame: " + gframe + "\n" + "Saddle: " + gsaddle + "\n" + "Handbars: " + ghandlebar + "\n" + "Wheels: " + gwheels);
 }
+function YourBike() {
+    alert("Your Designed Bike will have the following components\n" + "Frame: " + gframe + "\n" + "Saddle: " + gsaddle + "\n" + "Handbars: " + ghandlebar + "\n" + "Wheels: " + gwheels);
+}
 
 /*  possible code to write to the db based on the choices.... 
 if (gframe === 'Black') {

@@ -57,6 +57,7 @@ namespace DesignUrFixie.Controllers
             {
                 db.Bikes.Add(bike);
                 db.SaveChanges();
+                
                 return RedirectToAction("Index");
             }
 
