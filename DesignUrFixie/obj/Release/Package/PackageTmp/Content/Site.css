@@ -116,6 +116,18 @@ a.navbar-brand  {
 a.navbar-brand:hover {
             background: url(/Content/Images/DURFLogo4.png) no-repeat top left;
         }
+/* styling for divs on IndexGallery Page*/
+    .urlImage{
+        clear:both;
+        width: 16%;
+        margin-left: 42%; 
+        margin-right: 42%;
+    }
+    #GoDesign{
+        clear:both;
+    }
+
+
 @media (max-width: 991px) {
       
         #GreyBike, #FrameImage, #SaddleImage, #HandlebarImage, #WheelsImage
@@ -134,12 +146,17 @@ a.navbar-brand:hover {
     .col-sm-12 {
         min-height: 440px;  /* block containing bike image minimum height so the footer does not disappear behide bike*/
     }
-
+     #Slider{
+        height:440px;
+    }
 
 }
 @media (max-width: 600px) {
     #FormButton {
         top: 370px;
+    }
+    #Slider{
+        height:400px;
     }
 }
 @media (max-width: 500px) {
@@ -149,10 +166,45 @@ a.navbar-brand:hover {
     .col-sm-12 {
         min-height: 290px;
     }
+    #Slider{
+        height:310px;
+    }
+    
+     .urlImage{
+        top:500px;
+        clear:both;
+        width: 60%;
+        margin-left: 20%; 
+        margin-right: 20%;
+    }
 }
 @media (max-width: 450px) {
     #FormButton {
         top: 270px;
+    }
+     #Slider{
+        height:270px;
+    }
+    .urlImage{
+        top:auto;
+        width: 60%;
+        margin-left: 20%; 
+        margin-right: 20%;
+    }
+}
+@media (max-width: 400px) {
+    .jumbotron {
+    margin-bottom: 2px;
+    }
+
+      #Slider{
+        height:210px;
+    }
+    .urlImage{
+        top:auto;
+        width: 60%;
+        margin-left: 20%; 
+        margin-right: 20%;
     }
 }
 @media (max-width: 350px) {
@@ -161,5 +213,15 @@ a.navbar-brand:hover {
     }
     .col-sm-12 {
         min-height: 200px;
+    }
+    .urlImage{
+        top:200px;
+        
+        width: 60%;
+        margin-left: 20%; 
+        margin-right: 20%;
+    }
+    #GoDesign{
+        
     }
 }
