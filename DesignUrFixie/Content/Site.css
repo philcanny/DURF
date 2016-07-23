@@ -90,6 +90,10 @@ textarea {
             top:440px;
             left:auto;    
         }
+        #EditBikeImage
+        {
+            clear:left;
+        }
 
         .Create
         {

@@ -7,7 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using DesignUrFixie.Models;
-using System.Configuration;
+using Stripe;
 
 namespace DesignUrFixie.Controllers
 {
@@ -36,12 +36,27 @@ namespace DesignUrFixie.Controllers
             {
                 return HttpNotFound();
             }
-
             return View(bike);
+                   
+    }
 
-            
-            
+        // GET: /Payment/
+        [HttpPost]
+        public ActionResult Charge(string stripeToken, string stripeEmail)
+        {
+            string apiKey = "sk_test_3RiGWe2dnDwGiXGBS2F6iQ3m";
+            var stripeClient = new DesignUrFixie.StripeClient(apiKey);
+
+            dynamic response = stripeClient.CreateChargeWithToken(52500, stripeToken, "EUR", stripeEmail);
+
+            if (response.IsError == false && response.Paid)
+            {
+                // success
+                //return RedirectToAction("Index", "Home");
+            }
+            return View("Index");  //whatever, was Payment, and Charge
         }
+       
 
         // GET: Bikes/Create
         //[AllowAnonymous]

@@ -38,7 +38,7 @@ namespace DesignUrFixie.Controllers
         {
             ViewBag.Message = "Your Result page.";
 
-            return View("Result", "_myLayout");//select a different layout page
+            return View();
         }
 
         public ActionResult Bike()

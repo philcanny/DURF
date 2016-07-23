@@ -4,13 +4,14 @@
     ViewBag.Title = "List of created Bikes";
 }
 
-<h2>Index</h2>
+<h2>List of created bike designs</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
+        <th></th>
         <th>
             @Html.DisplayNameFor(model => model.BikeName)
         </th>
@@ -26,11 +27,16 @@
         <th>
             @Html.DisplayNameFor(model => model.WheelColour)
         </th>
-        <th></th>
+        
     </tr>
 
 @foreach (var item in Model) {
     <tr>
+        <td>
+            @Html.ActionLink("Payment", "Details", new { id = item.BikeId })  |
+            @Html.ActionLink("Edit", "Edit", new { id = item.BikeId })  |
+            @Html.ActionLink("Delete", "Delete", new { id = item.BikeId })
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.BikeName)
         </td>
@@ -46,11 +52,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.WheelColour)
         </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.BikeId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.BikeId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.BikeId })
-        </td>
+        
     </tr>
 }
 

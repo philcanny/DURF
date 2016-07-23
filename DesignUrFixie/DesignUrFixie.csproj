@@ -85,6 +85,10 @@
       <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Stripe.net, Version=6.3.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stripe.net.6.3.5\lib\net45\Stripe.net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -272,6 +276,7 @@
     <Content Include="Content\Images\RedHandlebar.png" />
     <Content Include="Content\Images\RedSaddle.png" />
     <Content Include="Content\Images\RedWheels.png" />
+    <Content Include="Content\Images\Wheel.png" />
     <Content Include="Content\TestImages\arrowleft.png" />
     <Content Include="Content\TestImages\arrowright.png" />
     <Content Include="Content\TestImages\img1.png" />
@@ -368,6 +373,7 @@
     <Content Include="Views\Home\Index - Copy.cshtml" />
     <Content Include="Views\Home\IndexGallery - Copy.cshtml" />
     <Content Include="Views\Bikes\1 Edit - Copy.cshtml" />
+    <Content Include="Views\Bikes\Charge.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

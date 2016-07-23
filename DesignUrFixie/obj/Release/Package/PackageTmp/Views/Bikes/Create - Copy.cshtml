@@ -1,23 +1,39 @@
 ﻿@model DesignUrFixie.Models.Bike
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Create";
 }
-<section>
-    <h2>Edit Ur Bike</h2>
-    <!--  Area to include Form, button and bike above footer -->
+
+    <!--  THE IMAGE   -->
+
+    <div class="col-sm-12">
+        <div id="GreyBike">
+            <img src="~/Content/Images/GreyBike.png" class="img-responsive">
+        </div>
+        <div>
+            <div id="FrameImage">
+            </div>
+            <div id="SaddleImage">
+            </div>
+            <div id="HandlebarImage">
+            </div>
+            <div id="WheelsImage">
+            </div>
+        </div>
+    </div>
+
+
     <!--  THE FORM   -->
-    <div class="col-sm-4">
-        <!--  THE FORM   -->
+<div class="container" id="FormButton">
+    <div class="col-sm-8" id="Bform">
         @using (Html.BeginForm())
-        {
+            {
             @Html.AntiForgeryToken()
 
             <div class="form-horizontal">
-                <br />
+
                 <hr />
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                @Html.HiddenFor(model => model.BikeId)
                 <div class="form-group">
                     @Html.LabelFor(model => model.BikeName, htmlAttributes: new { @class = "control-label col-md-6" })
                     <div class="col-md-6">
@@ -27,7 +43,7 @@
                 </div>
                 <div class="form-group">
                     @Html.LabelFor(model => model.FrameColour, htmlAttributes: new { @class = "control-label col-md-6" })
-                    <div class="col-md-6">
+                    <div class="col-md-6" id="FC">
                         @Html.EditorFor(model => model.FrameColour, new { htmlAttributes = new { @class = "form-control" } })
                         @Html.ValidationMessageFor(model => model.FrameColour, "", new { @class = "text-danger" })
                     </div>
@@ -55,7 +71,8 @@
                 </div>
                 <div class="form-group">
                     <div class="col-md-offset-6 col-md-6">
-                        <input type="submit" value="Save" class="btn btn-default" />
+                        <input type="submit" value="Create Bike" class="btn btn-default" />
+                        <br />
                     </div>
                 </div>
             </div>
@@ -66,34 +83,14 @@
         @section Scripts {
             @Scripts.Render("~/bundles/jqueryval")
         }
+
     </div>
 
-
-<!--  THE IMAGE  -->
-    <div class="col-sm-8">
-        
-        <!--    BIKE IMAGE    -->
-        <div id="GreyBike">
-            <img src="~/Content/Images/GreyBike.png" class="img-responsive">
-        </div>
-        <div>
-            <div id="FrameImage">
-            </div>
-            <div id="SaddleImage">
-            </div>
-            <div id="HandlebarImage">
-            </div>
-            <div id="WheelsImage">
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="EditBikeImage">
     <!--  THE BUTTONS   -->
-    <h3>Reselect Ur Colours choices</h3>
+
     <div class="row">
-        <div class="col-sm-3">
+        <h3>  Click on Ur colours</h3>
+        <div class="col-sm-4">
             <div id="FrameColor">
                 <p><b>FRAME</b> Colour</p>
                 <p>
@@ -103,7 +100,8 @@
                 </p>
             </div>
         </div>
-        <div class="col-sm-3">
+
+        <div class="col-sm-4">
             <div id="SaddleColor">
                 <p><b>SADDLE</b> Colour</p>
                 <p>
@@ -113,7 +111,7 @@
                 </p>
             </div>
         </div>
-        <div class="col-sm-3">
+        <div class="col-sm-4">
             <div id="HandlebarColor">
                 <p><b>HANDLEBAR</b> Colour</p>
                 <p>
@@ -123,7 +121,7 @@
                 </p>
             </div>
         </div>
-        <div class="col-sm-3">
+        <div class="col-sm-4">
             <div id="WheelsColor">
                 <p><b>WHEELS</b> Colour</p>
                 <p>
@@ -133,6 +131,13 @@
                 </p>
             </div>
         </div>
+        
     </div>
-</section>
-<!-- on Load, need to set values from DB to function parameters so the bike will appear with the choices stored in the db -->
+    
+</div><!-- container div end -->
+
+
+
+
+
+
