@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using DesignUrFixie.Models;
+using System.Configuration;
 
 namespace DesignUrFixie.Controllers
 {
@@ -35,7 +36,11 @@ namespace DesignUrFixie.Controllers
             {
                 return HttpNotFound();
             }
+
             return View(bike);
+
+            
+            
         }
 
         // GET: Bikes/Create
