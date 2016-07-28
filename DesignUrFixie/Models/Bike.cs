@@ -12,7 +12,7 @@ namespace DesignUrFixie.Models
     {
         public int BikeId { get; set; }
         [Required]
-        public string BikeName { get; set; }
+        public string CustomerName { get; set; }
         [Required]
         public string FrameColour { get; set; }
         [Required]
@@ -31,5 +31,19 @@ namespace DesignUrFixie.Models
         {
             throw new NotImplementedException();
         }
+    }
+
+    public class StripeChargeModel
+    {
+        [Required]
+        public string Token { get; set; }
+
+        [Required]
+        public double Amount { get; set; }
+        // These fields are optional and are not 
+        // required for the creation of the token
+        public string CardHolderName { get; set; }
+        public string AddressLine1 { get; set; }
+        public string AddressCity { get; set; }
     }
 }

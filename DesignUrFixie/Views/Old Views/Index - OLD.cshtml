@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Design your dream Bike</h1>
+    <p>Resize this responsive page to see the effect!</p>
+</div>
+
+<div class="row">
+
+    <div class="col-sm-4">
+        <div id="FrameColour">
+            <h2>Design Your Bike</h2>
+
+            <p>Select Frame Colour</p>
+            <p>
+                <button class="button BF" onclick="setBlackFrame('blackFrame')">Black</button>
+                <button class="button RF" onclick="setRedFrame('redFrame')"> Red</button>
+                <button class="button GF" onclick="setGreenFrame('greenFrame')">Green</button>
+            </p>
+        </div>
+        <div id="SaddleColour">
+            <p>Select Saddle Colour</p>
+            <p>
+                <button class="button BF" onclick="setBlackSaddle('blackSaddle')">Black</button>
+                <button class="button RF" onclick="setRedSaddle('redSaddle')"> Red</button>
+                <button class="button GF" onclick="setGreenSaddle('greenSaddle')">Green</button>
+            </p>
+        </div>
+
+        <div>
+            <a href="/Home/Result"><button class="button BF">create</button></a>
+        </div>
+    </div>
+
+
+    <div class="col-sm-8">
+        <div id="GreyBike">
+            <img src="~/Content/Images/GreyBike.png">
+        </div>
+        <div>
+            <div id="FrameImage">
+            </div>
+            <div id="SaddleImage">
+            </div>
+        </div>
+    </div>
+</div>

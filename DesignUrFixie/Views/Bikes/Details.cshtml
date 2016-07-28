@@ -6,35 +6,26 @@
 
 <h2></h2>
 <section class="CreateHeight">
-    <div div class="col-sm-6">
+    <div div class="col-sm-6"> <!-- div takes up half the grid-->
         <!-- Order Bike Button -->
         <h2>Do you wish to order this Bike?</h2>
         <h3>Make a Stripe Payment</h3>
         <div>
-            <form action="@Url.Action("Result","Home")" method="POST">
-                <!-- was Charger changed to Index, Home-->
-                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                        data-key="pk_test_An5BWj2xsp8M8ebFFyqHEEha"
-                        data-image=""
-                        data-name="Design-Ur Fixie"
-                        data-description=""
-                        data-currency="EUR"
-                        data-amount="52500">
-                </script>
-            </form>
+           @Html.ActionLink("Pay with Stripe", "Charge", null, new { @class = "btn btn-default" }) <!-- Actionlink bring one onclick of button to the Charge page-->
+            <!--btn btn-default-->
         </div>
     </div>
 
-    <div class="col-sm-6">
+    <div class="col-sm-6">  <!-- div takes up half the grid-->
         
         <hr />
-        <dl class="dl-horizontal">
+        <dl class="dl-horizontal">  <!-- specific detail for that item is loaded in the form -->
             <dt>
-                @Html.DisplayNameFor(model => model.BikeName)
+                @Html.DisplayNameFor(model => model.CustomerName)
             </dt>
 
             <dd>
-                @Html.DisplayFor(model => model.BikeName)
+                @Html.DisplayFor(model => model.CustomerName)
             </dd>
 
             <dt>
@@ -69,7 +60,7 @@
                 @Html.DisplayFor(model => model.WheelColour)
             </dd>
             <dd>
-                @Html.ActionLink("Edit", "Edit", new { id = Model.BikeId }) |
+                @Html.ActionLink("Edit", "Edit", new { id = Model.BikeId }) |   <!-- option to edit or return to Index list -->
                 @Html.ActionLink("Back to List", "Index")
             </dd>
         </dl>

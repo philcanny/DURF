@@ -225,6 +225,10 @@
     <Compile Include="Migrations\201607212018005_TakeThree.Designer.cs">
       <DependentUpon>201607212018005_TakeThree.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201607241811533_CustomerName.cs" />
+    <Compile Include="Migrations\201607241811533_CustomerName.Designer.cs">
+      <DependentUpon>201607241811533_CustomerName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Bike.cs" />
@@ -333,9 +337,9 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Gallery1.cshtml" />
+    <Content Include="Views\Old Views\Gallery1.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\IndexP.cshtml" />
+    <Content Include="Views\Old Views\IndexP.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
@@ -359,7 +363,7 @@
     <Content Include="Views\Home\Result.cshtml" />
     <Content Include="Views\Shared\_myLayout.cshtml" />
     <Content Include="Views\Home\Bike.cshtml" />
-    <Content Include="Views\Home\Index - OLD.cshtml" />
+    <Content Include="Views\Old Views\Index - OLD.cshtml" />
     <Content Include="Views\Shared\_GalleryLayout.cshtml" />
     <Content Include="Views\Home\Gallery.cshtml" />
     <Content Include="Views\Bikes\Create.cshtml" />
@@ -368,11 +372,12 @@
     <Content Include="Views\Bikes\Edit.cshtml" />
     <Content Include="Views\Bikes\Index.cshtml" />
     <Content Include="Views\Shared\_BikePartialView.cshtml" />
-    <Content Include="Views\Bikes\1 Create - Copy.cshtml" />
+    <Content Include="Views\Old Views\1 Create - Copy.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Index - Copy.cshtml" />
     <Content Include="Views\Home\IndexGallery - Copy.cshtml" />
-    <Content Include="Views\Bikes\1 Edit - Copy.cshtml" />
+    <Content Include="Views\Old Views\1 Edit - Copy.cshtml" />
+    <Content Include="Views\Old Views\oldCharge.cshtml" />
     <Content Include="Views\Bikes\Charge.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -395,6 +400,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201607212018005_TakeThree.resx">
       <DependentUpon>201607212018005_TakeThree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607241811533_CustomerName.resx">
+      <DependentUpon>201607241811533_CustomerName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

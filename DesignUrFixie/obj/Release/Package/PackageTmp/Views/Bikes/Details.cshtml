@@ -4,83 +4,87 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2></h2>
+<section class="CreateHeight">
+    <div div class="col-sm-6">
+        <!-- Order Bike Button -->
+        <h2>Do you wish to order this Bike?</h2>
+        <h3>Make a Stripe Payment</h3>
+        <div>
+           @Html.ActionLink("Pay with Stripe", "Charge", null, new { @class = "btn btn-default" })
 
-<div>
-    <h4>Do you wish to order this Bike?</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.BikeName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.BikeName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.FrameColour)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.FrameColour)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.SaddleColour)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.SaddleColour)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.HandlebarColour)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.HandlebarColour)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.WheelColour)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.WheelColour)
-        </dd>
-
-    </dl>
-</div>
-
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.BikeId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
-
-<div class="form-group">
-    <!-- Order Bike Button -->
-    <div class="col-md-offset-2 col-md-6">
-        <input type="submit" value="Order this Bike" class="btn btn-default" />
-
-        <br />
-    </div>
-</div>
-
-<!--  THE IMAGE  -->
-<div class="col-sm-8">
-    <!--    BIKE IMAGE    -->
-    <div id="GreyBike">
-        <img src="~/Content/Images/GreyBike.png" class="img-responsive">
-    </div>
-    <div>
-        <div id="FrameImage">
-        </div>
-        <div id="SaddleImage">
-        </div>
-        <div id="HandlebarImage">
-        </div>
-        <div id="WheelsImage">
         </div>
     </div>
+
+    <div class="col-sm-6">
+        
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.BikeName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.BikeName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.FrameColour)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FrameColour)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.SaddleColour)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SaddleColour)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.HandlebarColour)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.HandlebarColour)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.WheelColour)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.WheelColour)
+            </dd>
+            <dd>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.BikeId }) |
+                @Html.ActionLink("Back to List", "Index")
+            </dd>
+        </dl>
 </div>
+
+
+
+   
+
+    <!--  THE IMAGE  -->
+    <div class="col-sm-12">
+        <!--    BIKE IMAGE    -->
+        <div id="GreyBike">
+            <img src="~/Content/Images/GreyBike.png" class="img-responsive">
+        </div>
+        <div>
+            <div id="FrameImage">
+            </div>
+            <div id="SaddleImage">
+            </div>
+            <div id="HandlebarImage">
+            </div>
+            <div id="WheelsImage">
+            </div>
+        </div>
+    </div>
+</section>

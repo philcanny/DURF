@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
   <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-DesignUrFixie-20160620083530.mdf;Initial Catalog=aspnet-DesignUrFixie-20160620083530;Integrated Security=True" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\pcanny\\Source\\Repos\\DURF\\DesignUrFixie\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\philc\\Documents\\Visual\ Studio\ 2015\\Projects\\SingleGear\\DesignUrFixie\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
   </parameter>
   <parameter name="DURF-Web.config Connection String" description="DURF Connection String used in web.config by the application to access the database." defaultValue="data source=(LocalDB)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\DURF.mdf;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\pcanny\\Source\\Repos\\DURF\\DesignUrFixie\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DURF']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\philc\\Documents\\Visual\ Studio\ 2015\\Projects\\SingleGear\\DesignUrFixie\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DURF']/@connectionString" />
   </parameter>
   <parameter name="MyDbContext-Web.config Connection String" description="MyDbContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=(localdb)\MSSQLLocalDB; Initial Catalog=MyDbContext-20160716191904; Integrated Security=True; MultipleActiveResultSets=True; AttachDbFilename=|DataDirectory|MyDbContext-20160716191904.mdf" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\pcanny\\Source\\Repos\\DURF\\DesignUrFixie\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='MyDbContext']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\philc\\Documents\\Visual\ Studio\ 2015\\Projects\\SingleGear\\DesignUrFixie\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='MyDbContext']/@connectionString" />
   </parameter>
 </parameters>

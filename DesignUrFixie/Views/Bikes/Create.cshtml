@@ -3,21 +3,21 @@
 @{
     ViewBag.Title = "Create";
 }
-    <!--  Azure  -->
+    <!--  Create page of Go-Design page  -->
     <!--  THE IMAGE   -->
 <section class="CreateHeight">
     <div class="col-sm-12">
-        <div id="GreyBike">
+        <div id="GreyBike">     <!-- Grey Image of bike is siting in this div the other div below get populate with an image based on the user choices-->
             <img src="~/Content/Images/GreyBike.png" class="img-responsive">
         </div>
         <div>
-            <div id="FrameImage">
+            <div id="FrameImage">       <!-- this div is populated with an image based on the user frame choice-->
             </div>
-            <div id="SaddleImage">
+            <div id="SaddleImage">      <!-- this div is populated with an image based on the user saddle choice-->
             </div>
-            <div id="HandlebarImage">
+            <div id="HandlebarImage">   <!-- this div is populated with an image based on the user handlebar choice-->
             </div>
-            <div id="WheelsImage">
+            <div id="WheelsImage">      <!-- this div is populated with an image based on the user wheel choice-->
             </div>
         </div>
     </div>
@@ -25,13 +25,16 @@
 
    
     <div class="container" id="FormButton">
-        <!--  THE BUTTONS   -->
+        <!--  THE BUTTONS  onclick of a button parameter value is passed to the function -->
 
         <div class="row">
-            <h3>  Click on Ur colours</h3>
-            <div class="col-sm-3">
+            <br/>
+            <h4>You must be logged in to save a design creation</h4>
+            <h3>  Click on the coloured boxes to select your colours</h3>
+            
+            <div class="col-sm-3">                  <!-- div is a quarter of the grid size-->
                 <div id="FrameColor">
-                    <p><b>FRAME</b> Colour</p>   <!-- Based on which button you select, a parameter with string of colour is passed into setFrame()-->
+                    <p><b>FRAME</b> Colour</p>      <!-- Based on which button you select, a parameter with string of the colour is passed into setFrame()-->
                     <p>
                         <input type='button' class="button BF" onclick="setFrame('Black')"> <!-- button BF is Black Coloured Button-->
                         <input type='button' class="button RF" onclick="setFrame('Red')">   <!-- button BF is Red Coloured Button-->
@@ -40,19 +43,19 @@
                 </div>
             </div>
 
-            <div class="col-sm-3">
+            <div class="col-sm-3">   
                 <div id="SaddleColor">
-                    <p><b>SADDLE</b> Colour</p>
+                    <p><b>SADDLE</b> Colour</p>   <!-- Based on which button you select, a parameter with string of the colour is passed into setSaddle()-->
                     <p>
-                        <input type='button' class="button BF" onclick="setSaddle('Black')">
-                        <input type='button' class="button RF" onclick="setSaddle('Red')">
-                        <input type='button' class="button GF" onclick="setSaddle('Green')">
+                        <input type='button' class="button BF" onclick="setSaddle('Black')">    <!-- each button is designed as a solid colour BF is Black -->
+                        <input type='button' class="button RF" onclick="setSaddle('Red')">      <!-- each button is designed as a solid colour BF is Red -->
+                        <input type='button' class="button GF" onclick="setSaddle('Green')">    <!-- each button is designed as a solid colour BF is Green -->
                     </p>
                 </div>
             </div>
             <div class="col-sm-3">
                 <div id="HandlebarColor">
-                    <p><b>HANDLEBAR</b> Colour</p>
+                    <p><b>HANDLEBAR</b> Colour</p>   <!-- Based on which button you select, a parameter with string of the colour is passed into setHandlebar()-->
                     <p>
                         <input type='button' class="button BF" onclick="setHandlebar('Black')">
                         <input type='button' class="button RF" onclick="setHandlebar('Red')">
@@ -62,7 +65,7 @@
             </div>
             <div class="col-sm-3">
                 <div id="WheelsColor">
-                    <p><b>WHEELS</b> Colour</p>
+                    <p><b>WHEELS</b> Colour</p>   <!-- Based on which button you select, a parameter with string of the colour is passed into setWheels()-->
                     <p>
                         <input type='button' class="button BF" onclick="setWheels('Black')">
                         <input type='button' class="button RF" onclick="setWheels('Red')">
@@ -84,10 +87,10 @@
                     <hr />
                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                     <div class="form-group">
-                        @Html.LabelFor(model => model.BikeName, htmlAttributes: new { @class = "control-label col-md-6" })
+                        @Html.LabelFor(model => model.CustomerName, htmlAttributes: new { @class = "control-label col-md-6" })
                         <div class="col-md-6">
-                            @Html.EditorFor(model => model.BikeName, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.BikeName, "", new { @class = "text-danger" })
+                            @Html.EditorFor(model => model.CustomerName, new { htmlAttributes = new { @class = "form-control" } }) <!-- takes value ffrom CustomerName input field-->
+                            @Html.ValidationMessageFor(model => model.CustomerName, "", new { @class = "text-danger" })             <!-- validation message if CustomerName input is blank-->
                         </div>
                     </div>
                     <div class="form-group">
@@ -128,7 +131,7 @@
                 </div>
             }
             <div class="col-md-offset-6 col-md-6">
-                @Html.ActionLink("Back to List", "Index")
+                @Html.ActionLink("Back to List", "Index")       <!-- returns the Index view -->
             </div>
             @section Scripts {
                 @Scripts.Render("~/bundles/jqueryval")

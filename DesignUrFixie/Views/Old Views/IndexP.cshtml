@@ -1,0 +1,75 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div class="jumbotron">
+    <h1>Design Ur Fixie</h1> <!-- LIVE AZURE INDEX line 4969 bootstrap for changes -->
+    <p></p>
+</div>
+
+
+
+<div class="row">
+    <div class="col-sm-3">
+        <div id="FrameColour">
+            <p><b>FRAME</b> Colour</p>
+            <p>
+                <input type='button' class="button BF" onclick="setFrame('Black')">
+                <input type='button' class="button RF" onclick="setFrame('Red')">
+                <input type='button' class="button GF" onclick="setFrame('Green')">
+            </p>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div id="SaddleColour">
+            <p><b>SADDLE</b> Colour</p>
+            <p>
+                <input type='button' class="button BF" onclick="setSaddle('Black')">
+                <input type='button' class="button RF" onclick="setSaddle('Red')">
+                <input type='button' class="button GF" onclick="setSaddle('Green')">
+            </p>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div id="HandlebarColour">
+            <p><b>HANDLEBAR</b> Colour</p>
+            <p>
+                <input type='button' class="button BF" onclick="setHandlebar('Black')">
+                <input type='button' class="button RF" onclick="setHandlebar('Red')">
+                <input type='button' class="button GF" onclick="setHandlebar('Green')">
+            </p>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div id="WheelColour">  <!-- Changed from WheelsColour -->
+            <p><b>WHEELS</b> Colour</p>
+            <p>
+                <input type='button' class="button BF" onclick="setWheels('Black')">
+                <input type='button' class="button RF" onclick="setWheels('Red')">
+                <input type='button' class="button GF" onclick="setWheels('Green')">
+            </p>
+        </div>
+    </div>
+
+
+</div>
+
+<section class="BikeHeight">
+    <div class="col-sm-12">
+        <div id="GreyBike">
+            <img src="~/Content/Images/GreyBike.png" class="img-responsive">
+        </div>
+        <div>
+            <div id="FrameImage">
+            </div>
+            <div id="SaddleImage">
+            </div>
+            <div id="HandlebarImage">
+            </div>
+            <div id="WheelsImage">
+            </div>
+        </div>
+
+    </div>
+</section>

@@ -3,7 +3,9 @@
 @{
     ViewBag.Title = "Edit";
 }
-<section class="CreateHeight"><!--  Area to include Form, button and bike above footer -->
+<section>
+    <h2>Edit Ur Bike</h2>
+    <!--  Area to include Form, button and bike above footer -->
     <!--  THE FORM   -->
     <div class="col-sm-4">
         <!--  THE FORM   -->
@@ -66,15 +68,30 @@
         }
     </div>
 
-    
 
+<!--  THE IMAGE  -->
+    <div class="col-sm-8">
+        
+        <!--    BIKE IMAGE    -->
+        <div id="GreyBike">
+            <img src="~/Content/Images/GreyBike.png" class="img-responsive">
+        </div>
+        <div>
+            <div id="FrameImage">
+            </div>
+            <div id="SaddleImage">
+            </div>
+            <div id="HandlebarImage">
+            </div>
+            <div id="WheelsImage">
+            </div>
+        </div>
+    </div>
+</section>
 
-
-
-
-
+<section id="EditBikeImage">
     <!--  THE BUTTONS   -->
-    <h2>Edit the colours of your design</h2>
+    <h3>Reselect Ur Colours choices</h3>
     <div class="row">
         <div class="col-sm-3">
             <div id="FrameColor">
@@ -117,24 +134,5 @@
             </div>
         </div>
     </div>
-
-    <!--  THE IMAGE  -->
-    <div class="col-sm-8">
-        <!--    BIKE IMAGE    -->
-        <div id="GreyBike">
-            <img src="~/Content/Images/GreyBike.png" class="img-responsive">
-        </div>
-        <div>
-            <div id="FrameImage">
-            </div>
-            <div id="SaddleImage">
-            </div>
-            <div id="HandlebarImage">
-            </div>
-            <div id="WheelsImage">
-            </div>
-        </div>
-    </div>
 </section>
-
 <!-- on Load, need to set values from DB to function parameters so the bike will appear with the choices stored in the db -->

@@ -8,13 +8,18 @@ using System.Web;
 using System.Web.Mvc;
 using DesignUrFixie.Models;
 using Stripe;
+using System.Threading.Tasks;
+using Microsoft.AspNet.Identity;
+
 
 namespace DesignUrFixie.Controllers
 {
-    
-    public class BikesController : Controller
+    [Authorize]
+    public class BikesController : Controller 
     {
+        
         private MyDbContext db = new MyDbContext();   //create an instance of the DataContext class in our DB
+       // private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Bikes
         //[Authorize]
@@ -27,6 +32,9 @@ namespace DesignUrFixie.Controllers
         //[Authorize]
         public ActionResult Details(int? id)
         {
+            // Phil making changes to create admin access
+            var userId = User.Identity.GetUserId();
+            //var userAccount = db.Bikes.Where(id == userId).First();
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -36,30 +44,15 @@ namespace DesignUrFixie.Controllers
             {
                 return HttpNotFound();
             }
+
             return View(bike);
                    
     }
 
-        // GET: /Payment/
-        [HttpPost]
-        public ActionResult Charge(string stripeToken, string stripeEmail)
-        {
-            string apiKey = "sk_test_3RiGWe2dnDwGiXGBS2F6iQ3m";
-            var stripeClient = new DesignUrFixie.StripeClient(apiKey);
 
-            dynamic response = stripeClient.CreateChargeWithToken(52500, stripeToken, "EUR", stripeEmail);
-
-            if (response.IsError == false && response.Paid)
-            {
-                // success
-                //return RedirectToAction("Index", "Home");
-            }
-            return View("Index");  //whatever, was Payment, and Charge
-        }
-       
 
         // GET: Bikes/Create
-        //[AllowAnonymous]
+        [AllowAnonymous]
         public ActionResult Create()
         {
             return View();
@@ -71,7 +64,7 @@ namespace DesignUrFixie.Controllers
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "BikeId,BikeName,FrameColour,SaddleColour,HandlebarColour,WheelColour")] Bike bike)
+        public ActionResult Create([Bind(Include = "BikeId,CustomerName,FrameColour,SaddleColour,HandlebarColour,WheelColour")] Bike bike)
         {
             if (ModelState.IsValid)
             {
@@ -106,7 +99,7 @@ namespace DesignUrFixie.Controllers
         //[Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "BikeId,BikeName,FrameColour,SaddleColour,HandlebarColour,WheelColour")] Bike bike)
+        public ActionResult Edit([Bind(Include = "BikeId,CustomerName,FrameColour,SaddleColour,HandlebarColour,WheelColour")] Bike bike)
         {
             if (ModelState.IsValid)
             {
@@ -153,5 +146,57 @@ namespace DesignUrFixie.Controllers
             }
             base.Dispose(disposing);
         }
+
+
+
+        // STRIPE CODE //
+
+        public ActionResult Charge()
+        {
+
+            ViewBag.Message = "Charge what you like";
+
+            return View(new StripeChargeModel());
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Charge(StripeChargeModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            var chargeId = await ProcessPayment(model);
+            return RedirectToAction("Result", "Home"); ;
+        }
+
+
+        private async Task<string> ProcessPayment(StripeChargeModel model)
+        {
+            return await Task.Run(() =>
+            {
+                var myCharge = new StripeChargeCreateOptions
+                {
+                    // convert the amount of €525.00 to pennies i.e. 52500  removed int from line below and added 525
+                    Amount = (int)(model.Amount * 100),
+                    Currency = "eur",
+                    Description = "Description for test charge",
+                    Source = new StripeSourceOptions
+                    {
+                        TokenId = model.Token
+                    }
+                };
+
+                var chargeService = new StripeChargeService("sk_test_3RiGWe2dnDwGiXGBS2F6iQ3m");
+                var stripeCharge = chargeService.Create(myCharge);
+
+                return stripeCharge.Id;
+            });
+        }
+
+
     }
 }

@@ -1,0 +1,143 @@
+﻿@model DesignUrFixie.Models.Bike
+
+@{
+    ViewBag.Title = "Create";
+}
+
+    <!--  THE IMAGE   -->
+
+    <div class="col-sm-12">
+        <div id="GreyBike">
+            <img src="~/Content/Images/GreyBike.png" class="img-responsive">
+        </div>
+        <div>
+            <div id="FrameImage">
+            </div>
+            <div id="SaddleImage">
+            </div>
+            <div id="HandlebarImage">
+            </div>
+            <div id="WheelsImage">
+            </div>
+        </div>
+    </div>
+
+
+    <!--  THE FORM   -->
+<div class="container" id="FormButton">
+    <div class="col-sm-8" id="Bform">
+        @using (Html.BeginForm())
+            {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.BikeName, htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-6">
+                        @Html.EditorFor(model => model.BikeName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.BikeName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.FrameColour, htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-6" id="FC">
+                        @Html.EditorFor(model => model.FrameColour, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.FrameColour, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.SaddleColour, htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-6">
+                        @Html.EditorFor(model => model.SaddleColour, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.SaddleColour, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.HandlebarColour, htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-6">
+                        @Html.EditorFor(model => model.HandlebarColour, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.HandlebarColour, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.WheelColour, htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-6">
+                        @Html.EditorFor(model => model.WheelColour, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.WheelColour, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-6 col-md-6">
+                        <input type="submit" value="Create Bike" class="btn btn-default" />
+                        <br />
+                    </div>
+                </div>
+            </div>
+        }
+        <div class="col-md-offset-6 col-md-6">
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+        @section Scripts {
+            @Scripts.Render("~/bundles/jqueryval")
+        }
+
+    </div>
+
+    <!--  THE BUTTONS   -->
+
+    <div class="row">
+        <h3>  Click on Ur colours</h3>
+        <div class="col-sm-4">
+            <div id="FrameColor">
+                <p><b>FRAME</b> Colour</p>
+                <p>
+                    <input type='button' class="button BF" onclick="setFrame('Black')">
+                    <input type='button' class="button RF" onclick="setFrame('Red')">
+                    <input type='button' class="button GF" onclick="setFrame('Green')">
+                </p>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div id="SaddleColor">
+                <p><b>SADDLE</b> Colour</p>
+                <p>
+                    <input type='button' class="button BF" onclick="setSaddle('Black')">
+                    <input type='button' class="button RF" onclick="setSaddle('Red')">
+                    <input type='button' class="button GF" onclick="setSaddle('Green')">
+                </p>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div id="HandlebarColor">
+                <p><b>HANDLEBAR</b> Colour</p>
+                <p>
+                    <input type='button' class="button BF" onclick="setHandlebar('Black')">
+                    <input type='button' class="button RF" onclick="setHandlebar('Red')">
+                    <input type='button' class="button GF" onclick="setHandlebar('Green')">
+                </p>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div id="WheelsColor">
+                <p><b>WHEELS</b> Colour</p>
+                <p>
+                    <input type='button' class="button BF" onclick="setWheels('Black')">
+                    <input type='button' class="button RF" onclick="setWheels('Red')">
+                    <input type='button' class="button GF" onclick="setWheels('Green')">
+                </p>
+            </div>
+        </div>
+        
+    </div>
+    
+</div><!-- container div end -->
+
+
+
+
+
+

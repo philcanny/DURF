@@ -301,3 +301,7 @@ C:\Users\philc\Documents\Visual Studio 2015\Projects\SingleGear\DesignUrFixie\ob
 C:\Users\philc\Documents\Visual Studio 2015\Projects\SingleGear\DesignUrFixie\obj\Release\DesignUrFixie.pdb
 C:\Users\philc\Documents\Visual Studio 2015\Projects\SingleGear\DesignUrFixie\bin\Stripe.net.dll
 C:\Users\philc\Documents\Visual Studio 2015\Projects\SingleGear\DesignUrFixie\bin\Stripe.net.pdb
+C:\Users\philc\Documents\Visual Studio 2015\Projects\SingleGear\DesignUrFixie\obj\Release\DesignUrFixie.Migrations.CustomerName.resources
+C:\Users\pcanny\Source\Repos\DURF\DesignUrFixie\bin\Stripe.net.dll
+C:\Users\pcanny\Source\Repos\DURF\DesignUrFixie\bin\Stripe.net.pdb
+C:\Users\pcanny\Source\Repos\DURF\DesignUrFixie\obj\Release\DesignUrFixie.Migrations.CustomerName.resources
